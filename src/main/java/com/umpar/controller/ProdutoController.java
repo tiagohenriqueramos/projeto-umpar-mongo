@@ -16,8 +16,10 @@ import com.umpar.dto.ProdutoResponseDTO;
 import com.umpar.exception.ApiResponse;
 import com.umpar.service.ProdutoService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 
+@SecurityRequirement(name = "bearer-key") 
 @RestController
 @RequestMapping("/produto")
 public class ProdutoController {
